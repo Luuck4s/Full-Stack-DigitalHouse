@@ -1,0 +1,23 @@
+[
+  {
+    "nome": "lulu",
+    "idade": 5,
+    "raca": "Pitbull",
+    "vacinado": true,
+    "servicos": ["Tosa", "Banho"]
+  },
+  {
+    "nome": "Junior",
+    "idade": 1,
+    "raca": "Pastor Alemão",
+    "vacinado": true,
+    "servicos": ["Banho"]
+  },
+  {
+    "nome": "Esquilo",
+    "idade": 2,
+    "raca": "SRB",
+    "vacinado": false,
+    "servicos": []
+  }
+]
