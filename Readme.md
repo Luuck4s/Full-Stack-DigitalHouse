@@ -6,8 +6,8 @@ Neste repositório está o conteúdo do curso separado por pastas, dentro de cad
 
 # Módulos
 
-### [Javascript Introdução](https://github.com/Luuck4s/Full-Stack-DigitalHouse/Js-Introducao/blob/master/)
+### [Javascript Introdução](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Js-Introducao)
 
-### [CORS](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/)
+### [CORS](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/CORS)
 
-### [Node](https://github.com/Luuck4s/Full-Stack-DigitalHouse/Node/blob/master/)
+### [Node](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Node)
