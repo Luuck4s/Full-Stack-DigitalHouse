@@ -7,15 +7,15 @@
 - **PMP** Certificação que o PMI aplica oara as pessoas conhecerem o **PMBOK**
 - **PMO** Project Management Officer
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_1.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_1.png?raw=true)
 
 ## Ciclo Tradicional
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_2.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_2.png?raw=true)
 
 ## Ciclo Ágil
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_3.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_3.png?raw=true)
 ...
 
 ## Manifesto ágil
@@ -64,30 +64,30 @@
 
 ## Backlog
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_4.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_4.png?raw=true)
 
 ## Time
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_5.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_5.png?raw=true)
 
 ## Retrospectiva
 
 > Somente os Devs participam da restrospectiva
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_6.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_6.png?raw=true)
 
 ## MVP
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_7.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_7.png?raw=true)
 
 ## MMP
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_8.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_8.png?raw=true)
 
 ## ROI
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_9.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_9.png?raw=true)
 
 ## TIM
 
-![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/CORS/blob/master/.github/graph_10.png?raw=true)
+![Gráfico](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/CORS/.github/graph_10.png?raw=true)
