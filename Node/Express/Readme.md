@@ -4,7 +4,7 @@ Framework que ajuda na criação de aplicações utilizando o node.
 
 ## MVC
 
-![Graph](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Node/Express/.github/grap1.png)
+![Graph](https://github.com/Luuck4s/Full-Stack-DigitalHouse/blob/master/Node/Express/.github/graph1.png?raw=true)
 
 # Express Generator
 
