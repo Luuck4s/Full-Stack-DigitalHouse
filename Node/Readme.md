@@ -1,7 +1,6 @@
 # :computer: Node
 
-No módulo de Node vimos a arquitetura Cliente/Servidor , http, npm, modularização.
-
+### :rocket: Módulos
 
 ### [NPM](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Node/NPM)
 
