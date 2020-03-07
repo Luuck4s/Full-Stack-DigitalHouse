@@ -1,15 +1,17 @@
-# Npm
+# :package: Npm
 
-### Instalando pacotes
+Npm é um gerenciador de pacotes que o node utiliza, necessitamos dele para instalar dependências em nossos projetos. 
+
+### :information_source: Instalando pacotes
 
 `$ npm install [nome package] --save`
 
-### Instalando pacotes em modo de Dev
+### :information_source: Instalando pacotes em modo de Dev
 
 `$ npm install [nome package] --save-dev`
 ou
 `$ npm install [nome package] -D`
 
-### Instalando pacotes em modo Global
+### :information_source: Instalando pacotes em modo Global
 
 `$ npm install [nome package] -g`
