@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+nav{
+    background-color: #6C63FF;
+    width: 100%;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.itemNavBar{
+    padding: 15px;
+    list-style: none;
+}
+
+.linkNavBar{
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    
+    transition: all 0.3s;
+}
+
+.linkNavBar:hover{
+    color: #00000099;
+    font-size: 20px;
+}
+
+#imgPesqueiro{
+    width: 800px;
+    align-self: center;
+    margin-bottom: 30px;
+    transition: width 0.2s;
+}
+
+#imgPesqueiro:hover{
+    width: 820px;
+}
+
+.textPesqueiro{
+    font-size: 19px;
+    text-align: justify;
+    padding: 0px 50px 0px;
+    margin-bottom: 30px;
+}
+
+#diferenciais{
+    color: rgb(82, 73, 251);
+    text-align: center;
+    padding: 15px;
+}
+
+.listDiferenciais{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0px 30px;
+}
+
+.itemDiferencial{
+    font-size: 20px;
+    list-style: none;
+    transition: all 0.3s;
+}
+
+.itemDiferencial:hover{
+    color: #6C63FF;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
