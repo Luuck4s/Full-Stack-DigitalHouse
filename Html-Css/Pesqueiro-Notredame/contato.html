@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Contato Notredame</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="localizacao.html">Localização</a>
+        <a class="itemSelected" href="contato.html">Contato</a>
+    </nav>
+    <main>
+        <form method="GET" action="">
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="nacio">Nacionalidade</label>
+                <select name="nacio" id="nacio">
+                    <option disabled selected>Selecione um País</option>
+                    <optgroup label="América do Sul">
+                        <option value="br">Brasil</option>
+                        <option value="ar">Argentina</option>
+                    </optgroup>
+                    <optgroup label="América do Norte">
+                        <option value="eua">EUA</option>
+                    </optgroup>
+                    <optgroup label="Europa">
+                        <option value="es">Espanha</option>
+                    </optgroup>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <section>
+            <p>Telefone</p>
+            <p>(11) 3500-9839</p>
+        </section>
+        <section>
+            <p>Endereço</p>
+            <p>Av. Dr. Cardoso de Melo, 90 - Vila Olímpia, São Paulo - SP, 04548-000</p>
+        </section>
+    </footer>
+</body>
+
+</html>
