@@ -14,10 +14,25 @@
         <a class="itemSelected" href="contato.html">Contato</a>
     </nav>
     <main>
+        <h2>Entre em contato</h2>
         <form method="GET" action="">
             <div>
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome">
+            </div>
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
+            </div>
+            <div>
+                <label for="quant">Quantidade</label>
+                <input type="number" name="quant" id="quant">
+            </div>
+            <div>
+                <label for="genero-m">Masculino</label>
+                <input type="radio" name="genero" id="genero-m">
+                <label for="genero-f">Feminino</label>
+                <input type="radio" name="genero" id="genero-f">
             </div>
             <div>
                 <label for="email">Email</label>
@@ -38,6 +53,10 @@
                         <option value="es">Espanha</option>
                     </optgroup>
                 </select>
+            </div>
+            <div>
+                <label for="termos">Aceita os ternos</label>
+                <input type="checkbox" name="termos" id="termos">
             </div>
             <button type="submit">Enviar</button>
         </form>
