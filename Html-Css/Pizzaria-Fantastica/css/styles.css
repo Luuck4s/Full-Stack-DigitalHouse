@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 0px;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg.jpeg);
+  filter: brightness(0.3);
+  background-size: cover;
+  z-index: -1;
+}
+
+form {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  display: flex;
+  font-size: 1rem;
+}
+
+form input {
+  padding: 5px;
+  flex-grow: 1;
+}
+
+form input:focus {
+  outline: 2px solid #ff5100;
+  background-color: #fff;
+}
+
+form button {
+  background-color: #ff5100;
+  color: white;
+  border: none;
+  width: 100px;
+  cursor: pointer;
+}
+
+article {
+  display: flex;
+  width: 400px;
+  position: relative;
+}
+
+article img {
+  width: 100%;
+}
+
+article div {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  padding: 5px;
+  color: #000;
+  font-size: 1.5rem;
+  background-color: #ffffffaa;
+  opacity: 0.8;
+}
+
+article span {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  padding: 5px;
+  font-size: 1rem;
+  background-color: #000;
+  color: #fff;
+}
+
+article button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #ff5100;
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+article:hover button {
+  opacity: 0.8;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  form input {
+    padding: 8px;
+  }
+}

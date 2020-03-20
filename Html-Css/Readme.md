@@ -1,28 +1,25 @@
-
 # :school_satchel: Html + Css
 
 O Html é compostos por elementos
-
-  
 
 ```
 <elemento atributo="">
 
 </elemento>
-``` 
+```
 
-### :pencil: Elementos Html 
+### :pencil: Elementos Html
 
 - p
 
 - ul
 
-- ol 
+- ol
 
 - li
 
 - h1 ... h6
- 
+
 - a
 
 - img
@@ -63,16 +60,16 @@ O Html é compostos por elementos
 
 - last-child
 
-
-## Bootstrap 
+## Bootstrap
 
 ![Bootstrap logo](https://getbootstrap.com.br/docs/4.1/assets/img/bootstrap-stack.png)
 Bootstrap é um framework css, que nos ajuda a construir nossos projetos de maneira responsiva.
-O Bootstrap funciona tratando sua tela como uma "grelha"(grid) e isso nos ajuda a manter nosso site de maneira que funcione em todos os dispositivos. 
+O Bootstrap funciona tratando sua tela como uma "grelha"(grid) e isso nos ajuda a manter nosso site de maneira que funcione em todos os dispositivos.
 
 [**Bootstrap**](https://getbootstrap.com.br/)
-
 
 ## :trophy: Projetos
 
 - ### [Pesqueiro Notredame](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Html-Css/Pesqueiro-Notredame)
+
+- ### [Pizzaria Fantástica](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Html-Css/Pizaria-Fantastica)
