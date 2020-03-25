@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/bg-body.png");
+  background-attachment: fixed;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+img.container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* Definindo um espaçamento 'automatico' e com um margin entre eles de 20px  */
+  width: calc((100% - 100px) / 6);
+  background-color: #333;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .produto {
+  width: calc((100% - 40px) / 3);
+  margin-bottom: 20px;
+}
+
+main .produto img {
+  width: 100%;
+}
+
+main .produto a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  background: #333;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #b42a2a;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+}
+
+footer ul li {
+  width: calc((100% - 25px) / 6);
+  list-style: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+}
+
+@media (max-width: 920px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    width: calc((100% - 60px) / 3);
+    margin-bottom: 20px;
+  }
+
+  main .produto {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 40px) / 2);
+    margin-bottom: 20px;
+  }
+
+  main .produto a {
+    align-self: center;
+  }
+
+  footer ul {
+    width: 100%;
+  }
+
+  footer ul li {
+    width: calc((100% - 10px) / 6);
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    width: calc((100% - 40px) / 2);
+  }
+
+  main .produto {
+    width: 100%;
+  }
+
+  main .produto img {
+    margin: auto;
+  }
+
+  footer ul {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  footer ul li {
+    width: calc((100% - 10px) / 3);
+    margin-bottom: 10px;
+  }
+}

@@ -62,7 +62,10 @@ O Html é compostos por elementos
 
 ## Bootstrap
 
-![Bootstrap logo](https://getbootstrap.com.br/docs/4.1/assets/img/bootstrap-stack.png)
+<h1 align="center">
+  <img src="https://getbootstrap.com.br/docs/4.1/assets/img/bootstrap-stack.png" width="250px" />
+</h1>
+
 Bootstrap é um framework css, que nos ajuda a construir nossos projetos de maneira responsiva.
 O Bootstrap funciona tratando sua tela como uma "grelha"(grid) e isso nos ajuda a manter nosso site de maneira que funcione em todos os dispositivos.
 
