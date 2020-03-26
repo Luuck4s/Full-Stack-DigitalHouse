@@ -93,6 +93,10 @@ footer {
   border-top-right-radius: 20px;
 }
 
+.footer {
+  margin-top: 50px;
+}
+
 footer ul {
   display: flex;
   justify-content: space-between;
@@ -142,7 +146,7 @@ footer ul li a {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 570px) {
   nav ul {
     flex-wrap: wrap;
   }
