@@ -89,6 +89,6 @@ Documentação Flex: [Mozzila Doc](<[https://developer.mozilla.org/pt-BR/docs/Le
 
 - ### [Pesqueiro Notredame](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Html-Css/Pesqueiro-Notredame)
 
-* ### [Pizzaria Fantástica](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Html-Css/Pizaria-Fantastica)
+* ### [Pizzaria Fantástica](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Html-Css/Pizzaria-Fantastica)
 
 * ### [kitchening](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Html-Css/kitchening)
