@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaria Fantástica</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/pizza.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <img src="<%= pizza.img %>" alt="<%= pizza.nome %>" />
+        <h1><%= pizza.nome %></h1>
+        <h2><%= pizza.ingredientes.join(", ") %></h2>
+        <h3>
+          <%= Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL"
+          }).format(pizza.preco) %>
+        </h3>
+        <a id="backToHome" href="/"> <i class="material-icons">home</i> </a>
+        <% if(pizza.id > 1) { %>
+          <a id="back" title="Back" href="/pizza/<%= (pizza.id - 1) %>"><i class="material-icons">keyboard_arrow_left</i></a>
+        <% } %>
+        <% if(pizza.id <= 14) { %>
+          <a id="next" title="Next" href="/pizza/<%= (pizza.id + 1) %>"><i class="material-icons">keyboard_arrow_right</i></a>
+        <% } %>
+      </section>
+      <button><i class="material-icons">add_shopping_cart</i> Add</button>
+    </main>
+  </body>
+</html>
