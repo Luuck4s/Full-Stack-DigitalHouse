@@ -8,7 +8,7 @@
 </h4>
 
 
-Neste repositório está o conteúdo do curso separado por pastas, dentro de cada pasta contem o Readme contendo links e utilidades para cada modulo.
+Neste repositório está o conteúdo do curso separado por pastas, dentro de cada pasta contém o Readme com links e utilidades para cada modulo.
   
 ## :bookmark: Módulos
 
