@@ -1,6 +1,6 @@
 # Express
 
-Neste módulo aprendemos a trabalhar com o `express-generator`  assim dando continuidade ao nosso projeto de pizzaria utilizando o ejs como template engine.
+Neste módulo aprendemos a trabalhar com o `express-generator`  assim dando continuidade aos nossos projetos utilizando o ejs como template engine.
 
 # :trophy:  Projetos
 
