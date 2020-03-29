@@ -4,6 +4,6 @@ var router = express.Router();
 const PizzasController = require('../controllers/PizzasController');
 
 router.get("/", PizzasController.index);
-router.get("/Pizza/:id", PizzasController.search);
+router.get("/Pizza", PizzasController.search);
 
 module.exports = router;

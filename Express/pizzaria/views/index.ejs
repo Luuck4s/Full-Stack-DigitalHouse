@@ -6,30 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pizzaria Fantástica</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <form>
-    <input type="text" name="busca" placeholder="Qual pizza você procura?" autocomplete="off" />
+  <form action="pizza">
+    <input type="text" name="search" placeholder="Qual pizza você procura?" autocomplete="off" />
     <button type="submit">Buscar</button>
   </form>
   <main>
     <% pizzas.map(pizza => { %>
-    <article>
-      <img src="<%= pizza.img %>" alt="<%= pizza.nome %>" />
-      <button><i class="material-icons">add_shopping_cart</i> Add</button>
-      <a href="pizza/<%=pizza.id%>">Ver Mais</a>
-      <div><%= pizza.nome %></div>
-      <span>
-        <%= Intl.NumberFormat("pt-BR", 
-          { 
-            style: "currency", 
-            currency: "BRL"
-          }).format(pizza.preco) %></span>
-    </article>
-    <% }) %>
+      <article>
+        <img src="<%= pizza.img %>" alt="<%= pizza.nome %>" />
+        <button><i class="material-icons">add_shopping_cart</i> Add</button>
+        <a href="pizza?id=<%=pizza.id%>">Ver Mais</a>
+        <div><%= pizza.nome %></div>
+        <span>
+          <%= Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL"
+            }).format(pizza.preco) %>
+          </span>
+      </article>
+    <% }) %> 
   </main>
 </body>
 

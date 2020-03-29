@@ -6,11 +6,19 @@ module.exports = {
   },
 
   search(req, res) {
-    console.log(req.query);
-    const { id } = req.params;
+    const { id, search } = req.query;
+   
+    if(id){
+      let [pizza] = pizzas.filter(pizza => pizza.id == id);
+      return res.render("pizza", { pizza });
+    }
 
-    let [pizza] = pizzas.filter(pizza => pizza.id == id);
+    if(search){
+      let pizzasSearch = pizzas.filter(pizza => pizza.nome.includes(search));
 
-    return res.render("pizza", { pizza });
+      return res.render("index", { pizzas: pizzasSearch });
+    }
+
+    return res.render("index", { pizzas });
   }
 };
