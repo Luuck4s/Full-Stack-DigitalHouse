@@ -7,11 +7,11 @@
   <title>Pizzaria Fantástica</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
 <body>
-  <form action="pizza">
+  <form id="Formsearch" action="/pizza/busca" method="GET">
     <input type="text" name="search" placeholder="Qual pizza você procura?" autocomplete="off" />
     <button type="submit">Buscar</button>
   </form>
@@ -19,15 +19,31 @@
     <% pizzas.map(pizza => { %>
       <article>
         <img src="<%= pizza.img %>" alt="<%= pizza.nome %>" />
-        <button><i class="material-icons">add_shopping_cart</i> Add</button>
-        <a href="pizza?id=<%=pizza.id%>">Ver Mais</a>
-        <div><%= pizza.nome %></div>
+        <form action="/pedidos/add" method="POST">
+          <input type="hidden" name="idPizza" value="<%= pizza.id %>">
+          <button type="submit">
+            <i class="material-icons">add_shopping_cart</i> 
+            Add
+          </button>
+        </form>
+        <a href="/pizza?id=<%=pizza.id %>">Ver Mais</a>
+        <div><%= pizza.nome %></div></form>
         <span>
           <%= Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL"
             }).format(pizza.preco) %>
-          </span>
+        </span>
       </article>
     <% }) %> 
+    <% if(pizzas.length === 0) { %>
+      <div id="notResponse">
+        <a href="/">
+          <i class="material-icons">home</i>
+        </a>
+        <h1>Não há resultados para sua busca</h1>
+      </div>
+    <% } %>
+
+    <a id="btnFloat" href="/pizza/create"> <i class="material-icons">add_circle_outline</i></a>
   </main>
 </body>
 

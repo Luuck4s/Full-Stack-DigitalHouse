@@ -4,5 +4,5 @@ Neste módulo aprendemos a trabalhar com o `express-generator`  assim dando cont
 
 # :trophy:  Projetos
 
-### [Pizzaria Fantastica](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Express/pizzaria)
+### [Pizzaria Fantástica](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Express/pizzaria)
 
