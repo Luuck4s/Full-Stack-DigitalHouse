@@ -1,6 +1,6 @@
 
 <p  align="center">
-	<img  alt="Digital House Logo"  title="#Digital House"  	src=".github/logo_digital-house.jpg" width="100%">
+	<img  alt="Digital House Logo"  title="#Digital House"  	src=".github/logo_digital-house.jpg" width="80%">
 </p>
   
 <h4  align="center">
