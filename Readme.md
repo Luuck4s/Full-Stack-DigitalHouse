@@ -1,6 +1,6 @@
 
 <p  align="center">
-	<img  alt="Logo Coders"  title="#Santander Coders"  	src=".github/logo_coders.jpg" width="80%">
+	<img  alt="Logo Coders"  title="#Santander Coders"  	src=".github/logo_coders.png" width="80%">
 </p>
   
 <h4  align="center">
