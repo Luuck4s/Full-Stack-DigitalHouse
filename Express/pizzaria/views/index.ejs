@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pizzaria Fantástica</title>
+  <link rel="stylesheet" href="/css/styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             Add
           </button>
         </form>
-        <a href="/pizza?id=<%=pizza.id %>">Ver Mais</a>
+        <a href="/pizza/<%=pizza.id %>">Ver Mais</a>
         <div><%= pizza.nome %></div></form>
         <span>
           <%= Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL"

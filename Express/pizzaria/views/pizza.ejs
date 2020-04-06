@@ -23,10 +23,10 @@
         </h3>
         <a id="backToHome" href="/"> <i class="material-icons">home</i> </a>
         <% if(pizzaAnterior) { %>
-          <a id="back" title="Back" href="/pizza?id=<%= pizzaAnterior %>"><i class="material-icons">keyboard_arrow_left</i></a>
+          <a id="back" title="Back" href="/pizza/<%= pizzaAnterior %>"><i class="material-icons">keyboard_arrow_left</i></a>
         <% } %>
         <% if(pizzaProxima) { %>
-          <a id="next" title="Next" href="/pizza?id=<%= pizzaProxima %>"><i class="material-icons">keyboard_arrow_right</i></a>
+          <a id="next" title="Next" href="/pizza/<%= pizzaProxima %>"><i class="material-icons">keyboard_arrow_right</i></a>
         <% } %>
       </section>
       <button><i class="material-icons">add_shopping_cart</i> Add</button>
