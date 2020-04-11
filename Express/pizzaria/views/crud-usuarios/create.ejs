@@ -13,18 +13,16 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/form-pizza.css" />
+    <link rel="stylesheet" href="/css/form-usuario.css" />
   </head>
-
   <body>
     <form
-      id="form-pizza"
+      id="form-usuario"
       method="POST"
-      action="/pizza"
-      enctype="multipart/form-data"
+      action="/usuario"
       onsubmit="handleValidation(this)"
     >
-      <a href="/pizza">
+      <a href="/usuario">
         <i class="material-icons">keyboard_arrow_left</i>
       </a>
       <label>
@@ -33,38 +31,24 @@
           type="text"
           name="nome"
           id="nome"
-          placeholder="Digite o nome da pizza"
+          placeholder="Digite o nome do usuário"
         />
       </label>
 
       <label>
-        Ingredientes:
+        Email:
+        <input type="email" name="email" id="email" placeholder="Email" />
+      </label>
+
+      <label>
+        Senha:
         <input
-          type="text"
-          name="ingredientes"
-          id="ingredientes"
-          placeholder="Ingredientes (separados por vírgula)"
+          type="password"
+          name="senha"
+          id="senha"
+          placeholder="Digite a Senha"
         />
       </label>
-
-      <label>
-        Preço:
-        <input
-          type="number"
-          name="preco"
-          id="preco"
-          step="0.01"
-          placeholder="Digite o preço da pizza"
-        />
-      </label>
-
-      <label>
-        Foto:
-        <img src="/img/no-image.png" />
-        <div>Clique para selecione nova imagem</div>
-        <input type="file" name="img" id="img" />
-      </label>
-
       <button type="submit">Salvar</button>
     </form>
 
@@ -76,17 +60,14 @@
           return alert("Preencha o campo de nome!!");
         }
 
-        if (form.ingredientes.value.trim() === "") {
-          return alert("Preencha o campo de ingredientes!!");
+        if (form.email.value.trim() === "") {
+          return alert("Preencha o campo de email!!");
         }
 
-        if (form.preco.value.trim() === "") {
-          return alert("Preencha o valor da Pizza!!");
+        if (form.senha.value.trim() === "") {
+          return alert("Preencha o campo de senha!");
         }
 
-        if (form.img.value.trim() === "") {
-          return alert("Escolha uma foto para a Pizza!");
-        }
         form.submit();
       }
     </script>

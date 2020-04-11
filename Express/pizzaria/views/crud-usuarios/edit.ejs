@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaria Fantástica</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/form-usuario.css" />
+  </head>
+
+  <body>
+    <form
+      id="form-usuario"
+      method="POST"
+      action="/usuario/<%= usuario.id%>/update?_method=PUT"
+      onsubmit="handleValidation(this)"
+    >
+    <a href="/usuario">
+      <i class="material-icons">keyboard_arrow_left</i>
+    </a>
+      <label>
+        Nome:
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          value="<%= usuario.nome %>"
+          placeholder="Digite o nome do usuário"
+        />
+      </label>
+
+      <label>
+        Email:
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          value="<%= usuario.email %>"
+        />
+      </label>
+
+      <label>
+        Senha:
+        <input
+          type="password"
+          name="senha"
+          id="senha"
+          placeholder="Digite a Senha"
+        />
+
+      <button type="submit">Salvar</button>
+    </form>
+    <script>
+      function handleValidation(form){
+        event.preventDefault();
+
+        if(form.nome.value.trim() === ''){
+          return alert('Preencha o campo de nome!!');
+        }
+
+        if(form.email.value.trim() === ''){
+          return alert('Preencha o campo de email!!');
+        }
+
+        form.submit();
+      }
+    </script>
+  </body>
+</html>

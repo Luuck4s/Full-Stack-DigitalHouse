@@ -1,44 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaria Fantástica</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pizzaria Fantástica</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="/css/styles.css" />
-</head>
+  <body>
+    <link rel="stylesheet" href="/css/form-pizza.css" />
+    <form
+      id="form-pizza"
+      method="POST"
+      action="/pizza/<%= pizza.id%>/update?_method=PUT"
+			enctype="multipart/form-data"
+			onsubmit="handleValidation(this)"
+    >
+      <a href="/pizza">
+        <i class="material-icons">keyboard_arrow_left</i>
+      </a>
+      <label>
+        Nome:
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          value="<%= pizza.nome %>"
+          placeholder="Digite o nome da pizza"
+        />
+      </label>
 
-<body>
-<link rel="stylesheet" href="/css/form-pizza.css">
-<form id="form-pizza" method="POST" action="/pizza/<%= pizza.id%>/update?_method=PUT">
-	<label>
-		Nome:
-		<input type="text" name="nome" id="nome" value="<%= pizza.nome %>" placeholder="Digite o nome da pizza">
-	</label>
+      <label>
+        Ingredientes:
+        <input
+          type="text"
+          name="ingredientes"
+          value="<%= pizza.ingredientes.join(', ') %>"
+          id="ingredientes"
+          placeholder="Ingredientes (separados por vírgula)"
+        />
+      </label>
 
-	<label>
-		Ingredientes:
-		<input type="text" name="ingredientes" value="<%= pizza.ingredientes.join(', ') %>" id="ingredientes"
-			placeholder="Ingredientes (separados por vírgula)">
-	</label>
+      <label>
+        Preço:
+        <input
+          type="number"
+          name="preco"
+          id="preco"
+          value="<%= pizza.preco %>"
+          step="0.01"
+          placeholder="Digite o preço da pizza"
+        />
+      </label>
 
-	<label>
-		Preço:
-		<input type="number" name="preco" id="preco" value="<%= pizza.preco %>" step="0.01"
-			placeholder="Digite o preço da pizza">
-	</label>
+      <label>
+        Foto:
+        <img src="<%= pizza.img %>" alt="<%= pizza.nome %>" />
+        <div>Clique para selecione nova imagem</div>
+        <input type="file" name="img" id="img" />
+      </label>
 
-	<label>
-		Foto:
-		<img src="<%= pizza.img %>" alt="<%= pizza.nome %>">
-		<div>Clique para selecione nova imagem</div>
-		<input type="file" name="img" id="img">
-	</label>
+      <button type="submit">Salvar</button>
+    </form>
+    <script>
+      function handleValidation(form) {
+        event.preventDefault();
 
-	<button type="submit">Salvar</button>
-</form>
-</body>
+        if (form.nome.value.trim() === "") {
+          return alert("Preencha o campo de nome!!");
+        }
 
+        if (form.ingredientes.value.trim() === "") {
+          return alert("Preencha o campo de ingredientes!!");
+        }
+
+        if (form.preco.value.trim() === "") {
+          return alert("Preencha o valor da Pizza!!");
+        }
+        form.submit();
+      }
+    </script>
+  </body>
 </html>

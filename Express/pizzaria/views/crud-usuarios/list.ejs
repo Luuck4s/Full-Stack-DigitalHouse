@@ -8,29 +8,26 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/list-usuario.css">
 </head>
 
 <body>
-<link rel="stylesheet" href="/css/list-pizza.css">
-<div id="list-pizza">
+<div id="list-usuario">
 	<a id="backToHome" href="/"> <i class="material-icons">home</i> </a>
-	<a href="/pizza/create">Adicionar nova pizza</a>
+	<a href="/usuario/create">Adicionar novo Usuário</a>
 	<table>
 		<tbody>
-			<% for(let pizza of pizzas ) { %>
+			<% for(let usuario of usuarios ) { %>
 			<tr>
+				<td><%= usuario.nome %></td>
 				<td>
-					<img src="<%= pizza.img %>" alt="<%= pizza.nome %>"></td>
-				<td><%= pizza.nome %></td>
-				<td>
-					<%= pizza.preco.toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %>
+					<%= usuario.email %>
 				</td>
-				<td><%= pizza.ingredientes.join(", ") %></td>
 				<td>
-					<form name="formDelete" method="POST" onsubmit="handleDelete(this)"  action="/pizza/<%= pizza.id %>?_method=DELETE">
+					<form name="formDelete" method="POST" onsubmit="handleDelete(this)"  action="/usuario/<%= usuario.id %>?_method=DELETE">
 						<button type="submit">Remover</button>
 					</form>
-					<a href="/pizza/<%= pizza.id %>/edit">Editar</button>
+					<a href="/usuario/<%= usuario.id %>/edit">Editar</button>
 				</td>
 			</tr>
 			<% } %>
@@ -41,7 +38,7 @@
 	function handleDelete(form){
 		event.preventDefault();
 
-		let confirmation = confirm('Você realmente deseja apagar está pizza ?');
+		let confirmation = confirm('Você realmente deseja apagar este usuário ?');
 		
 		if(confirmation){
 			form.submit();

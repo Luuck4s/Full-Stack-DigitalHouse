@@ -116,10 +116,15 @@ main button {
 
 @media (max-width: 600px) {
 
+  main{
+    min-width: 250px;
+  }
+
   main section img {
     min-height: 250px;
-    max-width: 250px;
+    width: 100%;
   }
+
   main{
     max-width: 400px;
   }

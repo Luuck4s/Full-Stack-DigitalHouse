@@ -47,32 +47,72 @@ module.exports = {
   },
 
   store: (req, res) => {
-    const { nome, ingredientes, preco } = req.body;
+    let { nome, ingredientes, preco } = req.body;
 
-    let arrIngredientes = ingredientes
-      .trim()
-      .split(",")
-      .map((ing) => ing.trim());
+    nome = nome.trim();
 
-    const id = pizzas[pizzas.length - 1].id + 1;
+    let img = `/img/${req.file.filename}`;
 
-    const pizza = {
-      id: id,
-      nome: nome.trim(),
-      ingredientes: arrIngredientes,
-      preco,
-      img: "/img/no-image.png",
-      destaque: false,
-    };
+    let id = pizzas[pizzas.length - 1].id + 1;
+    ingredientes = ingredientes.split(",");
+    ingredientes.map((ing) => ing.trim());
 
+    preco = Number(preco);
+
+    const pizza = { id, nome, ingredientes, preco, img, destaque: false };
     pizzas.push(pizza);
 
-    fs.writeFileSync(`${__dirname}/../database/Pizzas.json`, JSON.stringify(pizzas));
-
-    res.redirect("/");
+    fs.writeFileSync("database/Pizzas.json", JSON.stringify(pizzas));
+    res.redirect("/pizza");
   },
 
   list: (req, res) => {
-    res.render("crud-pizzas/list");
+    res.render("crud-pizzas/list", { pizzas });
+  },
+
+  edit: (req, res) => {
+    let id = req.params.id;
+
+    let pizza = pizzas.find((pizza) => pizza.id == id);
+
+    res.render("crud-pizzas/edit", { pizza });
+  },
+
+  delete: (req, res) => {
+    let indexPizza = pizzas.findIndex((pizza, index) => {
+      return pizza.id == req.params.id;
+    });
+
+    pizzas.splice(indexPizza, 1);
+
+    fs.writeFileSync("database/Pizzas.json", JSON.stringify(pizzas));
+
+    res.redirect("/pizza");
+  },
+
+  update: (req, res) => {
+    let { nome, ingredientes, preco } = req.body;
+
+    ingredientes = ingredientes.split(",");
+    ingredientes.map((ing) => ing.trim());
+
+    let index = pizzas.findIndex((pizza) => {
+      return pizza.id == req.params.id;
+    });
+
+    preco = Number(preco);
+
+    pizzas[index].nome = nome;
+    pizzas[index].ingredientes = ingredientes;
+    pizzas[index].preco = preco;
+
+    if (req.file != undefined) {
+      let img = `/img/${req.file.filename}`;
+      pizzas[index].img = img;
+    }
+
+    fs.writeFileSync("database/Pizzas.json", JSON.stringify(pizzas));
+
+    res.redirect("/pizza");
   },
 };
