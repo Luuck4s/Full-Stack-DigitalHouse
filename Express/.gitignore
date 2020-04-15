@@ -1,1 +1,4 @@
 pizzaria/node_modules
+
+mailer/node_modules
+mailer/.env

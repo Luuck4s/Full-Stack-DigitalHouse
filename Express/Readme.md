@@ -6,3 +6,4 @@ Neste módulo aprendemos a trabalhar com o `express-generator`  assim dando cont
 
 ### [Pizzaria Fantástica](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Express/pizzaria)
 
+### [Mailer](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Express/mailer)
