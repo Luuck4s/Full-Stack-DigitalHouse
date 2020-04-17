@@ -174,16 +174,18 @@ article:hover button {
 
 #btnFloat{
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   background: #ffffffb2;
   border-radius: 100%;
   display: flex;
+  padding: 10px;
+  text-decoration: none;
 }
 
 #btnFloat i{
   color: #ff5100;
-  font-size: 60px;
+  font-size: 40px;
   transition: font-size 0.2s;
 }
 

@@ -19,7 +19,7 @@
     <% pizzas.map(pizza => { %>
       <article>
         <img src="<%= pizza.img %>" alt="<%= pizza.nome %>" />
-        <form action="/pedidos/add" method="POST">
+        <form action="/carrinho/add" method="POST">
           <input type="hidden" name="idPizza" value="<%= pizza.id %>">
           <button type="submit">
             <i class="material-icons">add_shopping_cart</i> 
@@ -42,7 +42,7 @@
         <h1>Não há resultados para sua busca</h1>
       </div>
     <% } %>
-
+    <a id="btnFloat" href="/carrinho"> <i class="material-icons">shopping_cart</i></a>
   </main>
 </body>
 

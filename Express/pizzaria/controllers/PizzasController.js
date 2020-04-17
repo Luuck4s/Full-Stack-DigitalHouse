@@ -13,7 +13,7 @@ module.exports = {
     let pizzaAnterior = false;
     let pizzaProxima = false;
 
-    if (pizza.id > 1) {
+    if (pizza.id && pizza.id > 1) {
       pizzaAnterior = pizza.id - 1;
     }
 
