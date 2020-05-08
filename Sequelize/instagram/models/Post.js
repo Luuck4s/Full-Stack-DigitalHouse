@@ -1,5 +1,5 @@
 let Post = (sequelize, DataTypes) => {
-  return sequelize.define(
+  let post = sequelize.define(
     "Post",
     {
       id: {
@@ -18,22 +18,34 @@ let Post = (sequelize, DataTypes) => {
       n_likes: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 0,
       },
       usuarios_id: {
         type: DataTypes.INTEGER,
-        references: {
-          model: "usuarios",
-          key: "id",
-          as: "usuarios",
-        },
         allowNull: false,
       },
     },
     {
       tableName: "posts",
-      timestamps: false,
+      timestamps: true,
     }
   );
+
+  post.associate = (models) => {
+    post.belongsTo(models.Usuario, {
+      foreignKey: "usuarios_id",
+      as: "usuarios",
+    });
+  };
+
+  post.associate = (models) => {
+    post.hasMany(models.Comentario, {
+      foreignKey: "posts_id",
+      as: "comentarios",
+    });
+  };
+
+  return post;
 };
 
 module.exports = Post;

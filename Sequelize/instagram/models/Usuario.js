@@ -1,6 +1,6 @@
 let Usuario = (sequelize, DataTypes) => {
-  return sequelize.define(
-    'Usuario', 
+  let usuario = sequelize.define(
+    "Usuario",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -19,14 +19,29 @@ let Usuario = (sequelize, DataTypes) => {
       senha: {
         type: DataTypes.STRING,
         allowNull: false,
-      }
+      },
     },
     {
       tableName: "usuarios",
-      timestamps: false
+      timestamps: true,
     }
-  )
-    
-}
+  );
+
+  usuario.associate = (models) => {
+    usuario.hasMany(models.Post, {
+      foreignKey: "usuarios_id",
+      as: "posts",
+    });
+  };
+
+  usuario.associate = (models) => {
+    usuario.hasMany(models.Comentario, {
+      foreignKey: "usuarios_id",
+      as: "comentarios",
+    });
+  };
+
+  return usuario;
+};
 
 module.exports = Usuario;
