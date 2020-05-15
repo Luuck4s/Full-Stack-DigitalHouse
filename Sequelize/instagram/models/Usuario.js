@@ -32,9 +32,7 @@ let Usuario = (sequelize, DataTypes) => {
       foreignKey: "usuarios_id",
       as: "posts",
     });
-  };
 
-  usuario.associate = (models) => {
     usuario.hasMany(models.Comentario, {
       foreignKey: "usuarios_id",
       as: "comentarios",

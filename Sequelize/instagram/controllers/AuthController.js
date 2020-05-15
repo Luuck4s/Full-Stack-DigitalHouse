@@ -1,4 +1,4 @@
-const { sequelize, Usuario } = require("../models");
+const { sequelize, Usuario, Post, Comentario } = require("../models");
 const bcrypt = require("bcrypt");
 
 const AuthController = {
@@ -25,8 +25,27 @@ const AuthController = {
     res.render("auth/register");
   },
 
-  showHome: (req, res) => {
-    res.render("index");
+  showHome: async (req, res) => {
+    let posts = await Post.findAll({
+      include: [
+        {
+          model: Usuario,
+          as: "autor",
+          include: "posts",
+          attributes: {
+            exclude: ["senha"],
+          },
+        },
+        {
+          model: Comentario,
+          as: "comentarios",
+          include: "autor",
+        },
+      ],
+    });
+
+  
+    res.render("index", {posts});
   },
 };
 

@@ -1,8 +1,23 @@
-const { sequelize, Post } = require("../models");
+const { sequelize, Post, Comentario, Usuario } = require("../models");
 
-Post.findAll({
-  include: "comentarios",
+Post.findOne({
+  include: [
+    {
+      model: Usuario,
+      as: "autor",
+      include: "posts",
+      // attributes: ['id','nome','email'] <- atributos que irão vim
+      attributes: {
+        exclude: ["senha"], // <- atributos que você quer excluir
+      },
+    },
+    { 
+      model: Comentario,
+      as: "comentarios",
+      include: "autor" 
+    },
+  ],
 }).then((data) => {
-  console.log(data.map((u) => u.toJSON()));
+  console.log(data.toJSON());
   sequelize.close();
 });
