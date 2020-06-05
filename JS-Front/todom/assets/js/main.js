@@ -1,4 +1,25 @@
-let tasks = JSON.parse(localStorage.getItem("@ToDom:tasks")) || [];
+const tasks = getLocalStorage();
+const formElement = document.querySelector("#form");
+
+formElement.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const { value } = event.target.tf_2do;
+
+  if (value !== "") {
+    addTask(value);
+    event.target.tf_2do.value = "";
+  } else {
+    alert("Digite algo animal");
+  }
+});
+
+function getLocalStorage() {
+  return JSON.parse(localStorage.getItem("@ToDom:tasks")) || [];
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("@ToDom:tasks", JSON.stringify(tasks));
+}
 
 function renderTasks() {
   const tableElement = document.querySelector("#table");
@@ -13,7 +34,13 @@ function renderTasks() {
     const iconTaskElement = document.createElement("i");
 
     inputTaskElement.setAttribute("type", "checkbox");
-    inputTaskElement.addEventListener("click", () => completeTask(task.id));
+
+    inputTaskElement.addEventListener("click", () => {
+      trTaskElement.classList.toggle("done");
+
+      task.complete = !task.complete;
+      saveToLocalStorage();
+    });
     tdTaskElement.appendChild(inputTaskElement);
 
     tdTextTaskElement.innerText = `[${getPriority(task.priority)}] ${
@@ -23,7 +50,11 @@ function renderTasks() {
     iconTaskElement.setAttribute("class", "material-icons");
     iconTaskElement.innerText = "delete";
 
-    tdDeleteTaskElement.addEventListener("click", () => deleteTask(task.id));
+    tdDeleteTaskElement.addEventListener("click", () => {
+      deleteTask(task.id) && trTaskElement.remove();
+
+      saveToLocalStorage();
+    });
 
     tdDeleteTaskElement.appendChild(iconTaskElement);
 
@@ -37,8 +68,6 @@ function renderTasks() {
     trTaskElement.appendChild(tdDeleteTaskElement);
     tableElement.appendChild(trTaskElement);
   });
-
-  saveToLocalStorage();
 }
 
 function getPriority(numPriority) {
@@ -47,30 +76,53 @@ function getPriority(numPriority) {
   return PRIORITY[numPriority - 1];
 }
 
-function saveToLocalStorage() {
-  localStorage.setItem("@ToDom:tasks", JSON.stringify(tasks));
-}
-
 function deleteTask(idTask) {
   const confirmation = confirm(
     "Você tem certeza que deseja deletar está tarefa ?"
   );
 
   if (confirmation) {
-    tasks = tasks.filter((task) => task.id !== idTask);
-    renderTasks();
+    let pos = tasks.findIndex((task) => task.id == idTask);
+    tasks.splice(pos, 1);
+
+    const sucess = document.querySelector(".success");
+    sucess.style.opacity = 1;
+
+    setTimeout(() => {
+      sucess.style.opacity = 0;
+    }, 1000);
+
+    return true;
   }
+
+  return false;
 }
 
-function completeTask(idTask) {
-  tasks = tasks.map((task) => {
-    if (task.id === idTask) {
-      task.complete = !task.complete;
-    }
-    return task;
-  });
+function addTask(text) {
+  let regExp = /^(?:#{1})([1-3])\s/;
 
+  let priority, desc;
+
+  if (regExp.test(text)) {
+    [, priority] = regExp.exec(text);
+    desc = text.substr(3);
+  } else {
+    priority = 1;
+    desc = text;
+  }
+
+  const id = tasks[tasks.length - 1]?.id + 1 || 0;
+
+  let task = {
+    id,
+    priority,
+    text: desc,
+    complete: false,
+  };
+
+  tasks.push(task);
   renderTasks();
+  saveToLocalStorage();
 }
 
 renderTasks();
