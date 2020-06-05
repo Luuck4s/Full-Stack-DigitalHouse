@@ -9,7 +9,7 @@ formElement.addEventListener("submit", (event) => {
     addTask(value);
     event.target.tf_2do.value = "";
   } else {
-    alert("Digite algo animal");
+    alert("Digite algo no campo de input");
   }
 });
 
