@@ -48,6 +48,8 @@ Neste repositório está o conteúdo do curso separado por pastas, dentro de cad
 
 - #### [Todom](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/todom)
 
+- #### [Busca Cep](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/busca_CEP)
+
 ---
 
 <h5 align="center"> 🚀 Web Full Stack   by Luuck4s 💜 </h5>
