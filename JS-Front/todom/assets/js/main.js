@@ -50,7 +50,7 @@ function renderTasks() {
     iconTaskElement.setAttribute("class", "material-icons");
     iconTaskElement.innerText = "delete";
 
-    tdDeleteTaskElement.addEventListener("click", () => {
+    iconTaskElement.addEventListener("click", () => {
       deleteTask(task.id) && trTaskElement.remove();
 
       saveToLocalStorage();
