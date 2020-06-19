@@ -46,12 +46,24 @@ Neste repositório está o conteúdo do curso separado por pastas, dentro de cad
 
 - #### [Jokenpo](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/jokenpo)
 
-- #### [Todom](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/todom)
+- #### [Todom Simples](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/todom)
 
 - #### [Busca Cep](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/busca_CEP)
 
+- #### [Pokemon](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/pokemon)
+
+- #### [Todom 2.0](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/todom-2.0)
+
+
+### [Mongo](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/mongo)
+
+### [React](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/React)
+
+- #### [Dashboard Estática](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/React/dashboard)
+
+
 ---
 
-<h5 align="center"> 🚀 Web Full Stack   by Luuck4s 💜 </h5>
+<h5 align="center"> 🚀  Web Full Stack   by Luuck4s 💜 </h5>
 
 ---
