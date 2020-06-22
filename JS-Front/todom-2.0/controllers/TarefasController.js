@@ -2,34 +2,82 @@ const { Usuario, Tarefa } = require("../models");
 const { decode, verify, sign } = require("jsonwebtoken");
 
 module.exports = {
-  index: async (req, res) => {
+  store: async (req, res) => {
     const { authentication } = req.headers;
-
-    if (!authentication) {
-      return res.status(403).json({ error: "Token não encontrado" });
-    }
+    const { text, priority, complete } = req.body;
 
     const [, token] = authentication.split(" ");
 
-    try {
-      verify(token, "segredo");
+    verify(token, "segredo");
 
-      const {
-        user,
-        user: { id },
-      } = decode(token);
+    const user = decode(token);
 
-      const tasks = await Tarefa.findAll({
+    await Tarefa.create({
+      texto: text,
+      prioridade: priority,
+      feito: complete,
+      usuario_id: user.id,
+    });
+
+    const tasks = await Tarefa.findAll({
+      where: {
+        usuario_id: user.id,
+      },
+    });
+
+    return res.json({ tasks });
+  },
+
+  index: async (req, res) => {
+    const { authentication } = req.headers;
+
+    const [, token] = authentication.split(" ");
+
+    verify(token, "segredo");
+
+    const {
+      user,
+      user: { id },
+    } = decode(token);
+
+    const tasks = await Tarefa.findAll({
+      where: {
+        usuario_id: id,
+      },
+    });
+
+    let newToken = sign(user, "segredo", { expiresIn: 10 * 60 });
+
+    return res.json({ tasks, token: newToken });
+  },
+
+  toggleTask: async (req, res) => {
+    const { taskId } = req.params;
+    const { done } = req.body;
+
+    await Tarefa.update(
+      {
+        feito: done,
+      },
+      {
         where: {
-          usuario_id: id,
+          id: taskId,
         },
-      });
+      }
+    );
 
-      let newToken = sign(user, "segredo");
+    return res.status(201).send();
+  },
 
-      return res.json({ tasks, token: newToken });
-    } catch (error) {
-      return res.status(403).json({ error: error.message });
-    }
+  delete: async (req, res) => {
+    const { taskId } = req.params;
+
+    await Tarefa.destroy({
+      where: {
+        id: taskId,
+      },
+    });
+
+    return res.status(201).send();
   },
 };

@@ -55,7 +55,7 @@ Neste repositório está o conteúdo do curso separado por pastas, dentro de cad
 - #### [Todom 2.0](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/JS-Front/todom-2.0)
 
 
-### [Mongo](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/mongo)
+### [Mongo](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/Mongo)
 
 ### [React](https://github.com/Luuck4s/Full-Stack-DigitalHouse/tree/master/React)
 
