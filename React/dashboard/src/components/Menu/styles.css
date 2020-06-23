@@ -1,0 +1,106 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  background: #3a65cd;
+  padding: 15px 10px;
+  top: 0;
+  left: 0;
+}
+
+.menu-logo {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.menu-logo h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu-logo svg {
+  margin-right: 15px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-top: 1px solid #ecedf170;
+  border-bottom: 1px solid #ecedf170;
+  padding: 10px 0px;
+}
+
+.menu-pages {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ecedf170;
+}
+
+.menu-pages ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-pages ul li svg {
+  margin-right: 10px;
+}
+
+.menu-actions {
+  padding-top: 15px;
+}
+
+.menu-label {
+  font-size: 0.7rem;
+  color: #ecedf170;
+}
+
+.menu-actions ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #ffffffa6;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu-actions ul li:hover {
+  color: #fff;
+}
+
+.menu-actions ul li:hover svg {
+  color: #fff !important;
+}
+
+.menu-actions ul li svg {
+  margin-right: 10px;
+  margin-top: -2px;
+}
+
+.menu-actions ul li:last-child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1050px){
+  .menu {
+    width: 200px;
+  }
+}
+
